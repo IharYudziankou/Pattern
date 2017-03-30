@@ -1,4 +1,4 @@
-package com.headfirstlabs.hfdp.observer;
+package com.headfirstlabs.hfdp.observer.display;
 
 /**
  * Created by Ihar_Yudziankou on 3/29/2017.
