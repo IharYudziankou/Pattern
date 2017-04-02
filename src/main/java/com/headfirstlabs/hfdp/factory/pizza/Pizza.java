@@ -1,17 +1,14 @@
 package com.headfirstlabs.hfdp.factory.pizza;
 
-import com.headfirstlabs.hfdp.factory.ingredient.Cheese;
-import com.headfirstlabs.hfdp.factory.ingredient.Clams;
-import com.headfirstlabs.hfdp.factory.ingredient.Pepperoni;
-import com.headfirstlabs.hfdp.factory.ingredient.Veggies;
+import com.headfirstlabs.hfdp.factory.ingredient.*;
 
 /**
  * Created by Ihar_Yudziankou on 3/31/2017.
  */
 public abstract class Pizza {
     protected String name;
-    protected String dough;
-    protected String sauce;
+    protected Dough dough;
+    protected Sauce sauce;
     protected Veggies[] veggies;
     protected Cheese cheese;
     protected Pepperoni pepperoni;

@@ -11,11 +11,11 @@ public class PizzaTestDrive {
         PizzaStore chicagoStore = new ChicagoStylePizzaStore();
 
         Pizza pizza = nyStore.orderPizza("cheese");
-        System.out.println("Ethan ordered a " + pizza.getName());
+        System.out.println("Ethan ordered a " + pizza);
         System.out.println();
 
         pizza = chicagoStore.orderPizza("cheese");
-        System.out.println("Joel ordered a " + pizza.getName());
+        System.out.println("Joel ordered a " + pizza);
         System.out.println();
     }
 
