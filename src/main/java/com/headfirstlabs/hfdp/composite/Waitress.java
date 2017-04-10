@@ -1,38 +1,37 @@
 package com.headfirstlabs.hfdp.composite;
 
-import com.headfirstlabs.hfdp.iterator.Menu;
-import com.headfirstlabs.hfdp.iterator.MenuItem;
-
 import java.util.Iterator;
-import java.util.List;
 
 /**
  * Created by Администратор on 06.04.2017.
  */
-public class Waitress extends com.headfirstlabs.hfdp.iterator.Waitress {
-    private List<Menu> menus;
+public class Waitress {
+    private MenuComponent allMenus;
 
 
-    public Waitress(final List<Menu> menus) {
-        this.menus = menus;
+    public Waitress(final MenuComponent allMenus) {
+        this.allMenus = allMenus;
     }
 
-    @Override
+
     public void printMenu() {
-        final Iterator<Menu> menuIterator = menus.iterator();
-        while (menuIterator.hasNext()) {
-            final Menu menu = menuIterator.next();
-            printMenu(menu.createIterator());
-        }
+        allMenus.print();
     }
 
-    @Override
-    protected void printMenu(final Iterator<MenuItem> iterator) {
+    public void printVegetarianMenu() {
+        final Iterator<MenuComponent> iterator = allMenus.createIterator();
+        System.out.println();
+        System.out.println("VEGETARIAN MENU");
+        System.out.println("----");
         while (iterator.hasNext()) {
-            final MenuItem menuItem = iterator.next();
-            System.out.print(menuItem.getName() + ", ");
-            System.out.print(menuItem.getPrice() + " -- ");
-            System.out.println(menuItem.getDescription());
+            final MenuComponent menuComponent = iterator.next();
+            try {
+                if (menuComponent.isVegeterian()) {
+                    menuComponent.print();
+                }
+            } catch (final UnsupportedOperationException e) {
+
+            }
         }
     }
 }
