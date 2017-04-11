@@ -63,6 +63,10 @@ public class GumballMachine {
         this.state = state;
     }
 
+    public State getState() {
+        return state;
+    }
+
     public void releaseBall() {
         System.out.println("A gumball comes rolling out the slot...");
         if (count != 0) {
