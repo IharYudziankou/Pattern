@@ -1,9 +1,11 @@
 package com.headfirstlabs.hfdp.state;
 
+import java.io.Serializable;
+
 /**
  * Created by Ihar_Yudziankou on 4/11/2017.
  */
-public class GumballMachine {
+public class GumballMachine implements Serializable {
     private State soldOutState;
     private State noQuarterState;
     private State hasQuarterState;

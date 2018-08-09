@@ -4,7 +4,7 @@ package com.headfirstlabs.hfdp.state;
  * Created by Ihar_Yudziankou on 4/11/2017.
  */
 public class SoldState implements State {
-    private GumballMachine gumballMachine;
+    private transient GumballMachine gumballMachine;
 
     public SoldState(final GumballMachine gumballMachine) {
         this.gumballMachine = gumballMachine;

@@ -17,27 +17,6 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>rmic-maven-plugin</artifactId>
-                <version>1.3</version>
-                <executions>
-                    <execution>
-                        <id>rmic-process-classes</id>
-                        <goals>
-                            <goal>rmic</goal>
-                        </goals>
-                        <phase>compile</phase>
-                        <configuration>
-                            <keep>true</keep>
-                            <!--outputDirectory>${project.build.outputDirectory}</outputDirectory-->
-                            <includes>
-                                <include>com.headfirstlabs.hfdp.proxy.rmi.MyRemoteImpl</include>
-                            </includes>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
         </plugins>
     </build>
 
